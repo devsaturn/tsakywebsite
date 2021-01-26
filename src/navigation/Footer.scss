@@ -1,0 +1,17 @@
+.Footer__container {
+  height: 200px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgb(29, 3, 53);
+}
+
+.Footer__section {
+  margin: 4px;
+  padding: 2px;
+}
+
+.Footer__text {
+  color: #f9f7e8;
+}

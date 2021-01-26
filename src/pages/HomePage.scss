@@ -1,0 +1,24 @@
+.HomePage__container {
+  background-color: #f9f7e8;
+}
+
+.HomePage__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.HomePage__section {
+  padding: 6px;
+
+  p {
+    font-family: "Sen", sans-serif;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-family: "Sen", sans-serif;
+  }
+}

@@ -1,7 +1,7 @@
 .Navigation__container {
   width: 100vw;
   background-color: #f9f7e8;
-  height: 80px;
+  height: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,11 +27,32 @@
 }
 
 .Navigation__item {
+  width: 30%;
   text-decoration: none;
   margin-right: 10%;
   font-family: "Sen", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.Navigation__icon {
+  color: #61bfad;
+  margin-right: 2%;
 }
 
 h1 {
   font-family: "Sen", sans-serif;
+  color: #ff8b8b;
+}
+
+.Navigation__text {
+  font-family: "Sen", sans-serif;
+  margin-left: 6%;
+  font-size: 16px;
 }

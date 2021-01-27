@@ -6,7 +6,6 @@ import productNatute from '../assets/images/Products/tsaky-nature.jpg'
 import productFromage from '../assets/images/Products/tsaky-fromage.jpg'
 import productPiment from '../assets/images/Products/tsaky-piment.jpg'
 
-import {GiCheeseWedge, GiChiliPepper} from 'react-icons/gi'
 import Rellax from 'rellax'
 
 
@@ -15,17 +14,20 @@ function HomePage() {
     {
       id: 1,
       title: 'TSAKY nature',
-      image: productNatute
+      image: productNatute,
+      type: 'nature'
     },
     {
       id: 2,
       title: 'TSAKY fromage',
-      image: productFromage
+      image: productFromage,
+      type: 'fromage'
     },
     {
       id: 3,
       title: 'TSAKY piment',
-      image: productPiment
+      image: productPiment,
+      type: 'piment'
     }
   ])
 
@@ -58,7 +60,7 @@ function HomePage() {
           {
             products.map(product =>  {
               return (
-                <ProductCard key={product.id} title={product.title} image={product.image}/>
+                <ProductCard key={product.id} title={product.title} image={product.image} type={product.type}/>
               )
             })
 

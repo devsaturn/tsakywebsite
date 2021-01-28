@@ -1,0 +1,27 @@
+.SectionHeader__container {
+  width: 80%;
+  margin: 25%;
+  padding: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: flex-start;
+  align-items: flex-start;
+}
+
+.SectionHeader__container {
+  width: 80%;
+  font-family: "Sen", sans-serif;
+  color: #61bfad;
+}
+
+.SectionHeader__section_quote {
+  font-family: "Sen", sans-serif;
+  color: #ff8b8b;
+}
+p {
+  width: 80%;
+
+  font-family: "Sen", sans-serif;
+  color: #61bfad;
+}

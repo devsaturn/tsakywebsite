@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
 
-* {
+body,
+html {
   background-color: #f9f7e8;
+}
+
+.decorationWhite {
+  background-color: #fff;
+  color: #fff;
+  z-index: -5;
+  height: 900px;
+  width: 850px;
+  border-radius: 50%;
+  margin-bottom: -300px;
+  margin-left: -350px;
 }
 
 .App {

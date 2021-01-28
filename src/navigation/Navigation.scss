@@ -18,18 +18,15 @@
 }
 
 .Navigation__groupItems {
-  width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   justify-items: flex-start;
-  padding-top: 2%;
+  margin-right: 4%;
 }
 
 .Navigation__item {
-  width: 30%;
   text-decoration: none;
-  margin-right: 10%;
   font-family: "Sen", sans-serif;
   display: flex;
   flex-direction: row;
@@ -53,6 +50,7 @@ h1 {
 
 .Navigation__text {
   font-family: "Sen", sans-serif;
-  margin-left: 6%;
+  color: #61bfad;
+  margin-left: 10%;
   font-size: 16px;
 }

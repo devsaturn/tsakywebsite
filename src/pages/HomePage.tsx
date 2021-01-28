@@ -5,58 +5,47 @@ import './HomePage.scss'
 import productNatute from '../assets/images/Products/tsaky-nature.jpg'
 import productFromage from '../assets/images/Products/tsaky-fromage.jpg'
 import productPiment from '../assets/images/Products/tsaky-piment.jpg'
-
+import scene3 from '../assets/images/decoration/3SCENE.png'
 import Rellax from 'rellax'
-
+import { Divider, Drawer } from "@material-ui/core"
+import SectionHeader from "../components/SectionHeader"
+import {useSelector, useDispatch} from "react-redux"
+import {productsSelector} from "../store/reduces/productSlice"
+import {openSelector} from "../store/reduces/basketSlice"
+import Command from "../components/Command"
 
 function HomePage() {
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      title: 'TSAKY nature',
-      image: productNatute,
-      type: 'nature'
-    },
-    {
-      id: 2,
-      title: 'TSAKY fromage',
-      image: productFromage,
-      type: 'fromage'
-    },
-    {
-      id: 3,
-      title: 'TSAKY piment',
-      image: productPiment,
-      type: 'piment'
-    }
-  ])
+  const products = useSelector(productsSelector)
+  const open = useSelector(openSelector)
 
   useEffect(() => {
-    var rellax = new Rellax('.rellax', {
-      breakpoints: [576, 768, 1201],
-      center: true
-    });
+    // var rellax = new Rellax('.rellax', {
+    //   breakpoints: [576, 768, 1201],
+    //   center: true
+    // });
 
-    rellax.refresh()
+    // rellax.refresh()
 
   }, [])
 
 
 
   return (
+    <>
       <div className="HomePage__container">
-        <div className="rellax" data-rellax-percentage="0.5">
-          <h5>En plus des spécialités traditionnelles malgaches les plus courantes en snacking, plats, pâtisserie, en 2020 Nah Events fait le défi de lancer officiellement la vente des Tsaky en France.</h5>
+        <div className="HomePage__section_header">
+        <p>
+                "Biscuits salés, spécialités et produits phares de Madagascar, déclinés en différentes formes et saveurs.
+            Ils se dégustent en apéritif, ou en goûter pour le plaisir gourmand des petits et des grands !"
 
+                </p>
         </div>
 
-        <div className="rellax" data-rellax-speed="-2" data-rellax-percentage="0.5">
-          <h5>"Tsaky" est une marque de Nah Events, l' appellation de ses "caca pigeon"</h5>
-        </div>
 
+        <div className="HomePage__section">
+         <img src={scene3} alt="scene3" className="HomePage__Imagerestaurant"></img>
 
-
-        <div className="HomePage__section rellax" data-rellax-speed="-5">
+          <div className="HomePage__section_products">
           {
             products.map(product =>  {
               return (
@@ -65,8 +54,13 @@ function HomePage() {
             })
 
           }
+          </div>
+          
 
         </div>
+        <div className="HomePage__section_header">
+        </div>
+
 
         {/* <div className="rellax" data-rellax-speed="5"
          data-rellax-zindex="5" data-rellax-percentage="0.7">
@@ -78,8 +72,15 @@ function HomePage() {
           </div> */}
 
 
-        <Footer />
       </div>
+      <Drawer className="Home_drawer"
+        variant="persistent"
+        anchor="right"
+        classes={{paper: '500'}}
+        open={open}>
+          <Command/>
+        </Drawer>
+</>
   )
 }
 
